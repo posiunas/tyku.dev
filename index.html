@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="TYKU - web dev studio">
+        <meta name="theme-color" content="#091722">
+        <title>tyku.dev studio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --bg-top: #000000;
+                --bg-mid: #091722;
+                --accent: #F45511;
+                --fg: #DCE5E4;
+            }
+
+            html,
+            body {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "Fira Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+                background: linear-gradient(180deg, var(--bg-top) 30%, var(--bg-mid) 50%, var(--bg-top) 70%);
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                min-height: 100vh;
+                box-sizing: border-box;
+                color: var(--fg);
+            }
+
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 28px;
+                min-height: 100vh;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .name {
+                margin: 0;
+                color: var(--fg);
+                font-weight: 400;
+                font-style: normal;
+                text-transform: uppercase;
+                letter-spacing: 6px;
+                line-height: 1;
+                font-size: clamp(36px, 6.5vw, 96px);
+            }
+
+            .line-left,
+            .line-right {
+                background: var(--accent);
+                height: 3px;
+                flex: 1 1 0;
+                border-radius: 2px;
+                min-width: 40px;
+                opacity: 0.98;
+            }
+
+            @media (prefers-reduced-motion: no-preference) {
+                .name {
+                    animation: fadeUp 600ms ease both 120ms;
+                }
+
+                .line-left {
+                    animation: growLeft 600ms ease both;
+                    transform-origin: left;
+                }
+
+                .line-right {
+                    animation: growRight 600ms ease both;
+                    transform-origin: right;
+                }
+            }
+
+            @keyframes fadeUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes growLeft {
+                from {
+                    transform: scaleX(0);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: scaleX(1);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes growRight {
+                from {
+                    transform: scaleX(0);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: scaleX(1);
+                    opacity: 1;
+                }
+            }
+
+            @media (max-width:420px) {
+                .container {
+                    gap: 20px;
+                }
+
+                .name {
+                    letter-spacing: 3px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container" role="main">
+            <div class="line-left" aria-hidden="true"></div>
+            <h1 class="name">TYKU</h1>
+            <div class="line-right" aria-hidden="true"></div>
+        </main>
+    </body>
+</html>
