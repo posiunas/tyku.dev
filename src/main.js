@@ -7,13 +7,13 @@ function initGlitchEffect() {
     title.setAttribute('data-text', text);
 
     setInterval(() => {
-        if (Math.random() > 0.95) {
+        if (Math.random() > 0.70) {
             title.classList.add('glitch-active');
             setTimeout(() => {
                 title.classList.remove('glitch-active');
             }, 200);
         }
-    }, 3000);
+    }, 2000);
 }
 
 // ===== CUSTOM CURSOR =====
@@ -146,19 +146,7 @@ function initSectionReveal() {
     });
 }
 
-// ===== SMOOTH SCROLL =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
+
 
 // ===== TEXT REVEAL ANIMATION =====
 function initTextReveal() {
