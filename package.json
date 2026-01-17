@@ -1,0 +1,26 @@
+{
+  "name": "tyku-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/posiunas/tyku.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/posiunas/tyku.github.io/issues"
+  },
+  "homepage": "https://github.com/posiunas/tyku.github.io#readme",
+  "devDependencies": {
+    "vite": "^7.1.9"
+  }
+}

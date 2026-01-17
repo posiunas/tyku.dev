@@ -1,138 +1,143 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="TYKU - web dev studio">
-        <meta name="theme-color" content="#091722">
-        <title>tyku.dev studio</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-        <style>
-            :root {
-                --bg-top: #000000;
-                --bg-mid: #091722;
-                --accent: #F45511;
-                --fg: #DCE5E4;
-            }
 
-            html,
-            body {
-                height: 100%;
-            }
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            body {
-                margin: 0;
-                padding: 0;
-                font-family: "Fira Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-                background: linear-gradient(180deg, var(--bg-top) 30%, var(--bg-mid) 50%, var(--bg-top) 70%);
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                min-height: 100vh;
-                box-sizing: border-box;
-                color: var(--fg);
-            }
+    <!-- Primary Meta Tags -->
+    <title>TYKU - Digital Artisans & Web Development</title>
+    <meta name="title" content="TYKU - Digital Artisans & Web Development">
+    <meta name="description"
+        content="Modern web development studio focused on creating minimalistic, high-performance digital experiences. Crafting digital excellence.">
 
-            .container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 28px;
-                min-height: 100vh;
-                width: 100%;
-                margin: 0 auto;
-            }
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tyku.dev/">
+    <meta property="og:title" content="TYKU - Digital Artisans & Web Development">
+    <meta property="og:description"
+        content="Modern web development studio focused on creating minimalistic, high-performance digital experiences. Crafting digital excellence.">
+    <meta property="og:image" content="https://tyku.dev/og-image.jpg">
 
-            .name {
-                margin: 0;
-                color: var(--fg);
-                font-weight: 400;
-                font-style: normal;
-                text-transform: uppercase;
-                letter-spacing: 6px;
-                line-height: 1;
-                font-size: clamp(36px, 6.5vw, 96px);
-            }
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tyku.dev/">
+    <meta property="twitter:title" content="TYKU - Digital Artisans & Web Development">
+    <meta property="twitter:description"
+        content="Modern web development studio focused on creating minimalistic, high-performance digital experiences. Crafting digital excellence.">
+    <meta property="twitter:image" content="https://tyku.dev/og-image.jpg">
 
-            .line-left,
-            .line-right {
-                background: var(--accent);
-                height: 3px;
-                flex: 1 1 0;
-                border-radius: 2px;
-                min-width: 40px;
-                opacity: 0.98;
-            }
+    <meta name="theme-color" content="#091722">
 
-            @media (prefers-reduced-motion: no-preference) {
-                .name {
-                    animation: fadeUp 600ms ease both 120ms;
-                }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
 
-                .line-left {
-                    animation: growLeft 600ms ease both;
-                    transform-origin: left;
-                }
+<body>
+    <!-- Fixed Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-logo">
+                <div class="header-line"></div>
+                <h1 class="header-name">TYKU</h1>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#manifesto">Manifesto</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-                .line-right {
-                    animation: growRight 600ms ease both;
-                    transform-origin: right;
-                }
-            }
-
-            @keyframes fadeUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(10px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            @keyframes growLeft {
-                from {
-                    transform: scaleX(0);
-                    opacity: 0;
-                }
-
-                to {
-                    transform: scaleX(1);
-                    opacity: 1;
-                }
-            }
-
-            @keyframes growRight {
-                from {
-                    transform: scaleX(0);
-                    opacity: 0;
-                }
-
-                to {
-                    transform: scaleX(1);
-                    opacity: 1;
-                }
-            }
-
-            @media (max-width:420px) {
-                .container {
-                    gap: 20px;
-                }
-
-                .name {
-                    letter-spacing: 3px;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <main class="container" role="main">
-            <div class="line-left" aria-hidden="true"></div>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-content">
+            <div class="hero-label">Dev</div>
             <h1 class="name">TYKU</h1>
-            <div class="line-right" aria-hidden="true"></div>
-        </main>
-    </body>
+            <p class="hero-tagline">Crafting Digital Excellence</p>
+            <a href="#contact" class="hero-cta">
+                Start Project
+                <span class="hero-arrow"></span>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </div>
+
+    <!-- Content Sections -->
+    <main class="content" role="main">
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                We are a modern web development studio focused on creating minimalistic,
+                high-performance digital experiences. Our approach combines clean design
+                with cutting-edge technology to deliver solutions that stand out.
+            </p>
+        </section>
+
+        <section id="manifesto">
+            <h2>Manifesto</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Location Independent</h3>
+                    <p>We work with anyone anywhere in the world from anywhere in the world.</p>
+                </div>
+                <div class="card">
+                    <h3>Self-Sufficient</h3>
+                    <p>We are capable of delivering end to end solutions.</p>
+                </div>
+                <div class="card">
+                    <h3>Value & Speed</h3>
+                    <p>We focus on value delivered and speed of delivery.</p>
+                </div>
+                <div class="card">
+                    <h3>Simplicity</h3>
+                    <p>We use simple tools that are delightful to use and just efficient.</p>
+                </div>
+                <div class="card">
+                    <h3>Growth</h3>
+                    <p>We learn with every challenge we take.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Services</h2>
+            <p>
+                From concept to deployment, we offer comprehensive web development services
+                tailored to your needs.
+            </p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Web Design</h3>
+                    <p>Minimalistic, user-focused interfaces that make an impact.</p>
+                </div>
+                <div class="card">
+                    <h3>Development</h3>
+                    <p>Clean, efficient code built with modern frameworks and best practices.</p>
+                </div>
+                <div class="card">
+                    <h3>Optimization</h3>
+                    <p>Performance-first approach ensuring fast, responsive experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                Ready to start your project? Let's build something great together.
+            </p>
+        </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
